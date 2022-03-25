@@ -101,82 +101,85 @@ public class httpThread extends Thread {
                     new InputStreamReader(in, "8859_1"));
             OutputStream out = client.getOutputStream();
             pout = new PrintStream(out, false, "8859_1");
+            do {
+                // create an object to store the http request
+                receivedhttp = new HTTPRequest(ServerGui, client.getInetAddress().getHostAddress() + ":"
+                        + client.getPort(), ss.getLocalPort());
+                boolean ok = receivedhttp.parse_Request(bin, true); // reads the input http request if everything was
+                                                                    // read
+                                                                    // ok it returnstrue
 
-            // create an object to store the http request
-            receivedhttp = new HTTPRequest(ServerGui, client.getInetAddress().getHostAddress() + ":"
-                    + client.getPort(), ss.getLocalPort());
-            boolean ok = receivedhttp.parse_Request(bin, true); // reads the input http request if everything was read
-                                                                // ok it returnstrue
+                // Prepares an answer object
+                ans = new HTTPAnswer(ServerGui,
+                        client.getInetAddress().getHostAddress() + ":" + client.getPort(),
+                        HttpServer.server_name + " - " + InetAddress.getLocalHost().getHostName() + "-"
+                                + ServerGui.server.getLocalPort());
 
-            // Prepares an answer object
-            ans = new HTTPAnswer(ServerGui,
-                    client.getInetAddress().getHostAddress() + ":" + client.getPort(),
-                    HttpServer.server_name + " - " + InetAddress.getLocalHost().getHostName() + "-"
-                            + ServerGui.server.getLocalPort());
-
-            // API URL received
-            if (receivedhttp.url_txt.toLowerCase().endsWith("api")) {
-                while (receivedhttp.url_txt.startsWith("/"))
-                    receivedhttp.url_txt = receivedhttp.url_txt.substring(1); /// remove "/" from url_txt
-                JavaRESTAPI api = start_API(receivedhttp.url_txt);
-                if (api != null) {
-                    try {
-                        Log(true, "run JavaAPI\n");
-                        api.doGet(client, receivedhttp.headers, receivedhttp.get_cookies(), ans);
-                    } catch (Exception e) {
-                        ans.set_error(HTTPReplyCode.BADREQ, receivedhttp.version);
-                    }
-                } else
-                    ans.set_error(HTTPReplyCode.NOTFOUND, receivedhttp.version);
-            } else {
-                // Get file with contents
-                String filename = ServerGui.getRaizHtml() + receivedhttp.url_txt
-                        + (receivedhttp.url_txt.equals("/") ? "index.htm" : "");
-                System.out.println("Filename= " + filename);
-                File f = new File(filename);
-
-                if (f.exists() && f.isFile()) {
-                    // Define reply contents
-                    ans.set_code(HTTPReplyCode.OK);
-                    ans.set_version(receivedhttp.version);
-                    ans.set_file_headers(new File(filename), guessMime(filename));
-                    // NOTICE that only the first line of the reply is sent!
-                    // No additional headers are defined!
+                // API URL received
+                if (receivedhttp.url_txt.toLowerCase().endsWith("api")) {
+                    while (receivedhttp.url_txt.startsWith("/"))
+                        receivedhttp.url_txt = receivedhttp.url_txt.substring(1); /// remove "/" from url_txt
+                    JavaRESTAPI api = start_API(receivedhttp.url_txt);
+                    if (api != null) {
+                        try {
+                            Log(true, "run JavaAPI\n");
+                            api.doGet(client, receivedhttp.headers, receivedhttp.get_cookies(), ans);
+                        } catch (Exception e) {
+                            ans.set_error(HTTPReplyCode.BADREQ, receivedhttp.version);
+                        }
+                    } else
+                        ans.set_error(HTTPReplyCode.NOTFOUND, receivedhttp.version);
                 } else {
-                    System.out.println("File not found");
-                    ans.set_error(HTTPReplyCode.NOTFOUND, receivedhttp.version);
-                    // NOTICE that some code is missing in HTTPAnswer!
-                }
-            }
-            // Send reply
+                    // Get file with contents
+                    String filename = ServerGui.getRaizHtml() + receivedhttp.url_txt
+                            + (receivedhttp.url_txt.equals("/") ? "index.htm" : "");
+                    System.out.println("Filename= " + filename);
+                    File f = new File(filename);
 
-            // check if modify
-            String las_modify_since = receivedhttp.headers.getHeaderValue("If-Modified-Since");
-            String last_modity = ans.headers.getProperty("Last-Modified");
-
-            DateFormat httpformat = new SimpleDateFormat("EE, d MMM yyyy HH:mm:ss zz", Locale.UK);
-            httpformat.setTimeZone(TimeZone.getTimeZone("GMT"));
-            if (las_modify_since != null) {
-                try {
-                    Date las_modify_since_date = httpformat.parse(las_modify_since);
-                    Date last_modity_date = httpformat.parse(last_modity);
-
-                    if (last_modity_date.after(las_modify_since_date)) {
+                    if (f.exists() && f.isFile()) {
+                        // Define reply contents
                         ans.set_code(HTTPReplyCode.OK);
-                        ans.send_Answer(pout, true, true);
+                        ans.set_version(receivedhttp.version);
+                        ans.set_file_headers(new File(filename), guessMime(filename));
+                        // NOTICE that only the first line of the reply is sent!
+                        // No additional headers are defined!
                     } else {
-                        ans.set_code(HTTPReplyCode.NOTMODIFIED);
-                        ans.send_Answer(pout, false, true);
+                        System.out.println("File not found");
+                        ans.set_error(HTTPReplyCode.NOTFOUND, receivedhttp.version);
+                        // NOTICE that some code is missing in HTTPAnswer!
                     }
-
-                } catch (ParseException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
                 }
-            } else {
-                ans.set_code(HTTPReplyCode.OK);
-                ans.send_Answer(pout, true, true);
-            }
+                // Send reply
+
+                // check if modify
+                String las_modify_since = receivedhttp.headers.getHeaderValue("If-Modified-Since");
+                String last_modity = ans.headers.getProperty("Last-Modified");
+
+                DateFormat httpformat = new SimpleDateFormat("EE, d MMM yyyy HH:mm:ss zz", Locale.UK);
+                httpformat.setTimeZone(TimeZone.getTimeZone("GMT"));
+                if (las_modify_since != null) {
+                    try {
+                        Date las_modify_since_date = httpformat.parse(las_modify_since);
+                        Date last_modity_date = httpformat.parse(last_modity);
+
+                        if (last_modity_date.after(las_modify_since_date)) {
+                            ans.set_code(HTTPReplyCode.OK);
+                            ans.send_Answer(pout, true, true);
+                        } else {
+                            ans.set_code(HTTPReplyCode.NOTMODIFIED);
+                            ans.send_Answer(pout, false, true);
+                        }
+
+                    } catch (ParseException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                } else {
+                    ans.set_code(HTTPReplyCode.OK);
+                    ans.send_Answer(pout, true, true);
+                }
+            } while (ans.headers.getProperty("Connection").equals("keep-alive")
+                    && receivedhttp.version.equals("HTTP/1.1"));
 
             in.close();
             pout.close();
