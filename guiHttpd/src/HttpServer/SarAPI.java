@@ -146,6 +146,8 @@ public class SarAPI extends JavaRESTAPI {
          *      If it is, it must deliver a web page with the last group introduced by the user
          *      Otherwise, the fields must be empty
          */
+        String sarCookie = cookies.getProperty("sarCookie");
+
         System.out.println("Cookies ignored in API GET");
 
         /* Don't forget to convert Names from API POST format to HTML format before preparing the web page
@@ -194,7 +196,8 @@ public class SarAPI extends JavaRESTAPI {
         int cnt= -1;
 
         System.out.println("Command not implemented in API POST");
-
+        // store the data in the db
+        if(SubmitButton) db.store_group(group, true, n1, nam1, n2, nam2, n3, nam3);
         // ...
         
         /* Don't forget to convert Names from API format to HTML format before preparing the web page
