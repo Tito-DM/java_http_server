@@ -90,7 +90,8 @@ public abstract class JavaRESTAPI {
     /** Runs GET method */
     public boolean doGet(Socket s, Headers head, Properties cookies, HTTPAnswer reply) { 
         // By default returns - "not supported"
-        System.out.println("default GET");
+        //return a 200 code
+        reply.set_code(HTTPReplyCode.OK);
         not_implemented(reply, "GET");
         return true;
     }

@@ -19,6 +19,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import javax.crypto.Cipher;
+
 import java.text.SimpleDateFormat;
 
 public class httpThread extends Thread {
@@ -101,15 +104,8 @@ public class httpThread extends Thread {
                     new InputStreamReader(in, "8859_1"));
             OutputStream out = client.getOutputStream();
             pout = new PrintStream(out, false, "8859_1");
-            int sendAnswer = 0;
             do {
                 try {
-
-                    if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
-                            && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() != 0) {
-                        client.setSoTimeout(ServerGui.getKeepAlive());
-
-                    }
 
                     // create an object to store the http request
                     receivedhttp = new HTTPRequest(ServerGui, client.getInetAddress().getHostAddress() + ":"
@@ -118,7 +114,11 @@ public class httpThread extends Thread {
                                                                         // was
                                                                         // read
                                                                         // ok it returnstrue
-
+                    // set the timeout
+                    if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
+                            && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() != 0) {
+                        client.setSoTimeout(ServerGui.getKeepAlive());
+                    }
                     // Prepares an answer object
                     ans = new HTTPAnswer(ServerGui,
                             client.getInetAddress().getHostAddress() + ":" + client.getPort(),
@@ -130,26 +130,32 @@ public class httpThread extends Thread {
                         while (receivedhttp.url_txt.startsWith("/"))
                             receivedhttp.url_txt = receivedhttp.url_txt.substring(1); /// remove "/" from url_txt
                         JavaRESTAPI api = start_API(receivedhttp.url_txt);
+                        // create a property to host the fields from form
+                        Properties fields = new Properties();
+
+                        if (receivedhttp.text != null) {
+                            // parse the string comming from the form
+                            String[] sentense = receivedhttp.text.split("&", receivedhttp.text.length());
+
+                            for (String str : sentense) {
+                                String[] new_str = str.split("=", str.length());
+                                fields.put(new_str[0], new_str[1]);
+                            }
+                        }
+
                         if (api != null) {
                             try {
+
                                 Log(true, "run JavaAPI\n");
-                                if(receivedhttp.method.equals("GET")){
+                                 //check if we received a get
+                                if (receivedhttp.method.equals("GET")) {
                                     api.doGet(client, receivedhttp.headers, receivedhttp.get_cookies(), ans);
                                 }
-                                Properties fields = new Properties();
-                               
-                                String[] sentence = receivedhttp.text.split("&", receivedhttp.text.length());
-                                for (String c : sentence) {
-                                      String[] newstr = c.split("=", c.length());
-                                      fields.put(newstr[0], newstr[1]);
-
-                                  }
-                               
-                               
-                                if(receivedhttp.method.equals("POST")){
-                                
+                                //check if we received a post
+                                if (receivedhttp.method.equals("POST")) {
                                     api.doPost(client, receivedhttp.headers, receivedhttp.get_cookies(), fields, ans);
                                 }
+
                             } catch (Exception e) {
                                 ans.set_error(HTTPReplyCode.BADREQ, receivedhttp.version);
                             }
@@ -169,8 +175,10 @@ public class httpThread extends Thread {
                             ans.set_file_headers(new File(filename), guessMime(filename));
                             // NOTICE that only the first line of the reply is sent!
                             // No additional headers are defined!
+                            // cheack if keep alive is 0
                             if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
                                     && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() == 0) {
+                                // close connection
                                 ans.set_header("Connection", "close");
                             }
                         } else {
@@ -182,10 +190,6 @@ public class httpThread extends Thread {
                     // Send reply
 
                     // parse.request
-
-                    if(receivedhttp.method.equals("POST")){
-                       String[] sentense =  receivedhttp.text.split("&", receivedhttp.text.length());
-                    }
 
                     // check if modify
                     String las_modify_since = receivedhttp.headers.getHeaderValue("If-Modified-Since");
@@ -200,31 +204,21 @@ public class httpThread extends Thread {
 
                             if (last_modity_date.after(las_modify_since_date)) {
                                 ans.set_code(HTTPReplyCode.OK);
-                                sendAnswer = 1;
+                                ans.send_Answer(pout, true, true);
                             } else {
                                 ans.set_code(HTTPReplyCode.NOTMODIFIED);
-                                sendAnswer = 2;
+                                ans.send_Answer(pout, false, true);
                             }
 
                         } catch (ParseException e) {
+                            // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
                     } else {
                         ans.set_code(HTTPReplyCode.OK);
-                        switch (sendAnswer) {
-                            case 1:
-                                ans.send_Answer(pout, true, true);
-                                break;
-                            case 2:
-                                ans.send_Answer(pout, false, true);
-                                break;
-
-                            default:
-                                break;
-                        }
-
+                        ans.send_Answer(pout, true, true);
                     }
-                } catch (SocketException e) {
+                } catch (IOException e) {
                     break;
                 }
             } while (ans.headers.getProperty("Connection").equals("keep-alive")

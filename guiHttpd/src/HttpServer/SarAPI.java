@@ -140,6 +140,7 @@ public class SarAPI extends JavaRESTAPI {
         System.out.println("run API GET");
 
         String group="", nam1="", n1="", nam2="", n2="", nam3="", n3="", lastUpdate="";
+        
         int cnt= -1;
         /**
          *      This part must check if the browser is sending the sarCookie
@@ -150,16 +151,16 @@ public class SarAPI extends JavaRESTAPI {
 
         System.out.println("Cookies ignored in API GET");
 
-        /* Don't forget to convert Names from API POST format to HTML format before preparing the web page
-            String aux= JavaRESTAPI.PostString2htmlString(nam1);
+        // Don't forget to convert Names from API POST format to HTML format before preparing the web page
+            String aux= JavaRESTAPI.postString2htmlString(nam1);
             if (aux != null) nam1= aux;
-            aux= JavaRESTAPI.PostString2htmlString(nam2);
+            aux= JavaRESTAPI.postString2htmlString(nam2);
             if (aux != null) nam2= aux;
-            aux= JavaRESTAPI.PostString2htmlString(nam3);
+            aux= JavaRESTAPI.postString2htmlString(nam3);
             if (aux != null) nam3= aux;
-            aux= JavaRESTAPI.PostString2htmlString(lastUpdate);
+            aux= JavaRESTAPI.postString2htmlString(lastUpdate);
             if (aux != null) lastUpdate= aux;
-         */
+         
 
         // Prepare html page
         String html= make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"), 
@@ -197,19 +198,22 @@ public class SarAPI extends JavaRESTAPI {
 
         System.out.println("Command not implemented in API POST");
         // store the data in the db
-        if(SubmitButton) db.store_group(group, true, n1, nam1, n2, nam2, n3, nam3);
+       
         // ...
         
-        /* Don't forget to convert Names from API format to HTML format before preparing the web page
-            String aux= JavaRESTAPI.PostString2htmlString(nam1);
+        // Don't forget to convert Names from API format to HTML format before preparing the web page
+            String aux= JavaRESTAPI.postString2htmlString(nam1);
             if (aux != null) nam1= aux;
-            aux= JavaRESTAPI.PostString2htmlString(nam2);
+            aux= JavaRESTAPI.postString2htmlString(nam2);
             if (aux != null) nam2= aux;
-            aux= JavaRESTAPI.PostString2htmlString(nam3);
+            aux= JavaRESTAPI.postString2htmlString(nam3);
             if (aux != null) nam3= aux;
-            aux= JavaRESTAPI.PostString2htmlString(lastUpdate);
+            aux= JavaRESTAPI.postString2htmlString(lastUpdate);
             if (aux != null) lastUpdate= aux;
-         */
+         
+
+         //save to db 
+         db.store_group(group, true, n1, nam1, n2, nam2, n3, nam3);
 
         // Prepare html page
         String html= make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"), 
