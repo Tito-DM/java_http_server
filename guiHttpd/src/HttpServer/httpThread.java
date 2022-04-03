@@ -114,17 +114,29 @@ public class httpThread extends Thread {
                                                                         // was
                                                                         // read
                                                                         // ok it returnstrue
-                    // set the timeout
-                    if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
-                            && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() != 0) {
-                        client.setSoTimeout(ServerGui.getKeepAlive());
-                    }
+
+                    // check
+
                     // Prepares an answer object
                     ans = new HTTPAnswer(ServerGui,
                             client.getInetAddress().getHostAddress() + ":" + client.getPort(),
                             HttpServer.server_name + " - " + InetAddress.getLocalHost().getHostName() + "-"
                                     + ServerGui.server.getLocalPort());
+                    String[] host = receivedhttp.headers.getHeaderValue("Host").split(":",
+                            receivedhttp.headers.getHeaderValue("Host").length());
+                  
+                    if ( Integer.parseInt(host[1])  != ServerGui.getPortHTTPS()) {
 
+                        ans.set_code(HTTPReplyCode.TMPREDIRECT);
+                        ans.set_header("Location", "https://" + host[0] + ":" + ServerGui.getPortHTTPS());
+
+                        ans.send_Answer(pout, false, false);
+                    }
+                    // set the timeout
+                    if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
+                            && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() != 0) {
+                        client.setSoTimeout(ServerGui.getKeepAlive());
+                    }
                     // API URL received
                     if (receivedhttp.url_txt.toLowerCase().endsWith("api")) {
                         while (receivedhttp.url_txt.startsWith("/"))
@@ -147,11 +159,11 @@ public class httpThread extends Thread {
                             try {
 
                                 Log(true, "run JavaAPI\n");
-                                 //check if we received a get
+                                // check if we received a get
                                 if (receivedhttp.method.equals("GET")) {
                                     api.doGet(client, receivedhttp.headers, receivedhttp.get_cookies(), ans);
                                 }
-                                //check if we received a post
+                                // check if we received a post
                                 if (receivedhttp.method.equals("POST")) {
                                     api.doPost(client, receivedhttp.headers, receivedhttp.get_cookies(), fields, ans);
                                 }
