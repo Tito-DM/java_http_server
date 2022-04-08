@@ -93,7 +93,7 @@ public class groupDB {
             String n2, String nam2, String n3, String nam3) {
         if (group.length() == 0)
             return;
-        String old= pgroups.getProperty(group+":");
+        String old= pgroups.getProperty(group+":counter");
         if (old == null) {
             System.out.println("Group database: new group = '"+group+"'");
             pgroups.setProperty(group+":counter", "0");
@@ -102,9 +102,11 @@ public class groupDB {
             System.out.println ("Group database: updating group = '"+group+"'");
         }
         if (contar) {
+          
             try {
                 int n= Integer.parseInt(old);
                 pgroups.setProperty(group+":counter", ""+(n+1));
+               
             }
             catch (Exception e) {
                 pgroups.setProperty(group+":counter", "1");

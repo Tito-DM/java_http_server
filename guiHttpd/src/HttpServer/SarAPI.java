@@ -69,13 +69,11 @@ public class SarAPI extends JavaRESTAPI {
 
     /** Prepares the SARsAPI web page that is sent as reply to the API call */
     private String make_Page(String ip, int port, String tipo, String grupo, int n, String n1, String na1, String n2,
-            String na2, String n3, String na3, boolean count, String lastUpdate , String cooky) {
+            String na2, String n3, String na3, boolean count, String lastUpdate, String cooky) {
         // Draw "lucky" numbers
         int[] set1 = draw_numbers(50, 5);
         int[] set2 = draw_numbers(9, 2);
-        StringBuilder bufLatAdded= new StringBuilder();
-
-    
+        StringBuilder bufLatAdded = new StringBuilder();
 
         // Prepare string html with web page
         String html = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\r\n<html>\r\n<head>\r\n";
@@ -123,13 +121,15 @@ public class SarAPI extends JavaRESTAPI {
         html += "</p>\r\n</form>\r\n";
         html += "<h3>Grupos registados</h3>";
         html += db.table_group_html();
+        if (cooky != null && cooky !="") {
+            html += bufLatAdded.append("<font color=\"#800000\"><h3> The Broswer Update group ").append(cooky).append(": ")
+                    .append(db.get_group_info(cooky, "counter")).append(" Times <h3/></font>");
+
+        }
         html += "<h3>Um exemplo de cont&eacute;udo din&acirc;mico :-)</h3>";
         html += "<p align=\"left\">Se quiser deitar dinheiro fora, aqui v&atilde;o algumas sugest&otilde;es para ";
         html += "o pr&oacute;ximo <a href=\"https://www.jogossantacasa.pt/web/JogarEuromilhoes/?\">Euromilh&otilde;es</a>: ";
-    
-        html +=bufLatAdded.append("<h3> The Broswer Update group ").append(cooky).append(" ").append(db.get_group_info(cooky, "counter")).append(" Times <h3/>");
-        
-       
+      
         for (int i = 0; i < 5; i++)
             html += (i == 0 ? "" : " ") + "<font color=\"#00ff00\">" + minimum(set1, 50) + "</font>";
         html += " + <font color=\"#800000\">" + minimum(set2, 9) + "</font> <font color=\"#800000\">" + minimum(set2, 9)
@@ -146,7 +146,7 @@ public class SarAPI extends JavaRESTAPI {
         System.out.println("run API GET");
 
         String group = "", nam1 = "", n1 = "", nam2 = "", n2 = "", nam3 = "", n3 = "", lastUpdate = "";
-      
+
         int cnt = -1;
         /**
          * This part must check if the browser is sending the sarCookie
@@ -154,7 +154,6 @@ public class SarAPI extends JavaRESTAPI {
          * user
          * Otherwise, the fields must be empty
          */
-      
 
         System.out.println("Cookies ignored in API GET");
 
@@ -175,7 +174,7 @@ public class SarAPI extends JavaRESTAPI {
 
         // Prepare html page
         String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
-                group, cnt, n1, nam1, n2, nam2, n3, nam3, false, lastUpdate,headers.getHeaderValue("Cookie"));
+                group, cnt, n1, nam1, n2, nam2, n3, nam3, false, lastUpdate, headers.getHeaderValue("Cookie"));
 
         // Prepare answer
         ans.set_code(HTTPReplyCode.OK);
@@ -228,28 +227,27 @@ public class SarAPI extends JavaRESTAPI {
             lastUpdate = aux;
 
         // check if delete btn was clicked
-        if (DeleteButton){
+        if (DeleteButton) {
             db.remove_group(group);
+            //db.save_group_db();
         }
 
-      
-
         // save to db
-        db.store_group(group,chekBtn , n1, nam1, n2, nam2, n3, nam3);
+        if(SubmitButton){
+        db.store_group(group, chekBtn, n1, nam1, n2, nam2, n3, nam3);
         db.save_group_db();
+    }
 
         // Prepare html page
         String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
-                group, cnt, n1, nam1, n2, nam2, n3, nam3, (fields.getProperty("Contador") != null), lastUpdate, "");
+                group, cnt, n1, nam1, n2, nam2, n3, nam3, chekBtn, lastUpdate, "");
 
         // Prepare answer
-       // ans.set_code(HTTPReplyCode.OK);
+        // ans.set_code(HTTPReplyCode.OK);
         ans.set_text_headers(html);
 
         // prepare the cookies
         ans.set_header("Set-Cookie", group);
-       
-        
 
         return true;
     }
