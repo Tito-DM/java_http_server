@@ -69,10 +69,13 @@ public class SarAPI extends JavaRESTAPI {
 
     /** Prepares the SARsAPI web page that is sent as reply to the API call */
     private String make_Page(String ip, int port, String tipo, String grupo, int n, String n1, String na1, String n2,
-            String na2, String n3, String na3, boolean count, String lastUpdate) {
+            String na2, String n3, String na3, boolean count, String lastUpdate , String cooky) {
         // Draw "lucky" numbers
         int[] set1 = draw_numbers(50, 5);
         int[] set2 = draw_numbers(9, 2);
+        StringBuilder bufLatAdded= new StringBuilder();
+
+    
 
         // Prepare string html with web page
         String html = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\r\n<html>\r\n<head>\r\n";
@@ -94,7 +97,7 @@ public class SarAPI extends JavaRESTAPI {
             html += "<p align=\"left\">O &uacute;ltimo acesso ao servidor por este utilizador foi em: " +
                     " <font color=\"#0000ff\">" + lastUpdate + "</font>.</p>\r\n";
         }
-        html += "<form method=\"post\" action=\"sarAPI\">\r\n<h3>\r\nDados do grupo</h3>";
+        html += "<form method=\"post\" action=\"SarAPI\">\r\n<h3>\r\nDados do grupo</h3>";
         html += "<p>Grupo <input name=\"Grupo\" size=\"2\" type=\"text\"" +
                 (grupo.length() > 0 ? " value=\"" + grupo + "\"" : "") + "></p>\r\n";
         html += "<p>N&uacute;mero <input name=\"Num1\" size=\"5\" type=\"text\"" +
@@ -123,6 +126,10 @@ public class SarAPI extends JavaRESTAPI {
         html += "<h3>Um exemplo de cont&eacute;udo din&acirc;mico :-)</h3>";
         html += "<p align=\"left\">Se quiser deitar dinheiro fora, aqui v&atilde;o algumas sugest&otilde;es para ";
         html += "o pr&oacute;ximo <a href=\"https://www.jogossantacasa.pt/web/JogarEuromilhoes/?\">Euromilh&otilde;es</a>: ";
+    
+        html +=bufLatAdded.append("<h3> The Broswer Update group ").append(cooky).append(" ").append(db.get_group_info(cooky, "counter")).append(" Times <h3/>");
+        
+       
         for (int i = 0; i < 5; i++)
             html += (i == 0 ? "" : " ") + "<font color=\"#00ff00\">" + minimum(set1, 50) + "</font>";
         html += " + <font color=\"#800000\">" + minimum(set2, 9) + "</font> <font color=\"#800000\">" + minimum(set2, 9)
@@ -139,7 +146,7 @@ public class SarAPI extends JavaRESTAPI {
         System.out.println("run API GET");
 
         String group = "", nam1 = "", n1 = "", nam2 = "", n2 = "", nam3 = "", n3 = "", lastUpdate = "";
-        
+      
         int cnt = -1;
         /**
          * This part must check if the browser is sending the sarCookie
@@ -147,7 +154,7 @@ public class SarAPI extends JavaRESTAPI {
          * user
          * Otherwise, the fields must be empty
          */
-        String sarCookie = cookies.getProperty("sarCookie");
+      
 
         System.out.println("Cookies ignored in API GET");
 
@@ -168,7 +175,7 @@ public class SarAPI extends JavaRESTAPI {
 
         // Prepare html page
         String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
-                group, cnt, n1, nam1, n2, nam2, n3, nam3, false, lastUpdate);
+                group, cnt, n1, nam1, n2, nam2, n3, nam3, false, lastUpdate,headers.getHeaderValue("Cookie"));
 
         // Prepare answer
         ans.set_code(HTTPReplyCode.OK);
@@ -193,6 +200,7 @@ public class SarAPI extends JavaRESTAPI {
         String n3 = fields.getProperty("Num3", "");
         boolean SubmitButton = (fields.getProperty("BotaoSubmeter") != null);
         boolean DeleteButton = (fields.getProperty("BotaoApagar") != null);
+        boolean chekBtn = (fields.getProperty("Contador") != null);
         String lastUpdate = "";
 
         System.err.println("Button: " + (SubmitButton ? "Submit" : "")
@@ -219,19 +227,28 @@ public class SarAPI extends JavaRESTAPI {
         if (aux != null)
             lastUpdate = aux;
 
+        // check if delete btn was clicked
+        if (DeleteButton){
+            db.remove_group(group);
+        }
+
+      
+
         // save to db
-        db.store_group(group, true, n1, nam1, n2, nam2, n3, nam3);
+        db.store_group(group,chekBtn , n1, nam1, n2, nam2, n3, nam3);
+        db.save_group_db();
 
         // Prepare html page
         String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
-                group, cnt, n1, nam1, n2, nam2, n3, nam3, (fields.getProperty("Contador") != null), lastUpdate);
+                group, cnt, n1, nam1, n2, nam2, n3, nam3, (fields.getProperty("Contador") != null), lastUpdate, "");
 
         // Prepare answer
-        ans.set_code(HTTPReplyCode.OK);
+       // ans.set_code(HTTPReplyCode.OK);
         ans.set_text_headers(html);
 
         // prepare the cookies
-        ans.set_header("set_cokies", group);
+        ans.set_header("Set-Cookie", group);
+       
         
 
         return true;
