@@ -131,7 +131,7 @@ public class groupDB {
         if (group.length() == 0)
             return;
         set.remove(group);
-        pgroups.remove(group+":");
+        pgroups.remove(group+":counter");
         pgroups.remove(group+":n1");
         pgroups.remove(group+":nam1");
         pgroups.remove(group+":n2");

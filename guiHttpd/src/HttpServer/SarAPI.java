@@ -121,15 +121,16 @@ public class SarAPI extends JavaRESTAPI {
         html += "</p>\r\n</form>\r\n";
         html += "<h3>Grupos registados</h3>";
         html += db.table_group_html();
-        if (cooky != null && cooky !="") {
-            html += bufLatAdded.append("<font color=\"#800000\"><h3> The Broswer Update group ").append(cooky).append(": ")
-                    .append(db.get_group_info(cooky, "counter")).append(" Times <h3/></font>");
+        if (cooky != null && cooky != "") {
+            html += bufLatAdded.append("<font color=\"#800000\"><h3> The Broswer Update group ").append(cooky)
+                    .append(": ")
+                    .append( db.get_group_info(cooky, "counter") !="" ? db.get_group_info(cooky, "counter"):"0" ).append(" Times <h3/></font>");
 
         }
         html += "<h3>Um exemplo de cont&eacute;udo din&acirc;mico :-)</h3>";
         html += "<p align=\"left\">Se quiser deitar dinheiro fora, aqui v&atilde;o algumas sugest&otilde;es para ";
         html += "o pr&oacute;ximo <a href=\"https://www.jogossantacasa.pt/web/JogarEuromilhoes/?\">Euromilh&otilde;es</a>: ";
-      
+
         for (int i = 0; i < 5; i++)
             html += (i == 0 ? "" : " ") + "<font color=\"#00ff00\">" + minimum(set1, 50) + "</font>";
         html += " + <font color=\"#800000\">" + minimum(set2, 9) + "</font> <font color=\"#800000\">" + minimum(set2, 9)
@@ -144,7 +145,8 @@ public class SarAPI extends JavaRESTAPI {
     @Override
     public boolean doGet(Socket s, Headers headers, Properties cookies, HTTPAnswer ans) {
         System.out.println("run API GET");
-
+        //load db
+      
         String group = "", nam1 = "", n1 = "", nam2 = "", n2 = "", nam3 = "", n3 = "", lastUpdate = "";
 
         int cnt = -1;
@@ -229,14 +231,14 @@ public class SarAPI extends JavaRESTAPI {
         // check if delete btn was clicked
         if (DeleteButton) {
             db.remove_group(group);
-            //db.save_group_db();
+            // db.save_group_db();
         }
 
         // save to db
-        if(SubmitButton){
-        db.store_group(group, chekBtn, n1, nam1, n2, nam2, n3, nam3);
-        db.save_group_db();
-    }
+        if (SubmitButton) {
+            db.store_group(group, chekBtn, n1, nam1, n2, nam2, n3, nam3);
+
+        }
 
         // Prepare html page
         String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),

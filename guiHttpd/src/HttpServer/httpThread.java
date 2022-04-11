@@ -135,7 +135,7 @@ public class httpThread extends Thread {
                     // set the timeout
                     if (receivedhttp.headers.getHeaderValue("Connection").equals("keep-alive")
                             && receivedhttp.version.equals("HTTP/1.1") && ServerGui.getKeepAlive() != 0) {
-                        client.setSoTimeout(ServerGui.getKeepAlive());
+                                client.setSoTimeout(ServerGui.getKeepAlive());
                     }
                     // API URL received
                     if (receivedhttp.url_txt.toLowerCase().endsWith("api")) {
@@ -231,11 +231,12 @@ public class httpThread extends Thread {
                         ans.send_Answer(pout, true, true);
                     }
                 } catch (IOException e) {
+                    System.out.println("SETIMEOUT break");
                     break;
                 }
             } while (ans.headers.getProperty("Connection").equals("keep-alive")
                     && receivedhttp.version.equals("HTTP/1.1"));
-
+                    System.out.println("Out Side Loop");
             in.close();
             pout.close();
             out.close();
