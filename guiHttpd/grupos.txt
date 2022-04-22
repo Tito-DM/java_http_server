@@ -1,15 +1,15 @@
 #1:nam3
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -17,17 +17,17 @@
 2\:n2=4
 2\:n1=3
 #1:nam1
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -35,17 +35,17 @@
 2\:n2=4
 2\:n1=3
 #1:nam2
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -53,17 +53,17 @@
 2\:n2=4
 2\:n1=3
 #1:counter
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -71,17 +71,17 @@
 2\:n2=4
 2\:n1=3
 #2:nam1
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -89,17 +89,17 @@
 2\:n2=4
 2\:n1=3
 #2:lastUpdate
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -107,17 +107,17 @@
 2\:n2=4
 2\:n1=3
 #2:counter
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -125,17 +125,17 @@
 2\:n2=4
 2\:n1=3
 #1:lastUpdate
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -143,17 +143,17 @@
 2\:n2=4
 2\:n1=3
 #2:nam3
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -161,17 +161,17 @@
 2\:n2=4
 2\:n1=3
 #2:nam2
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -179,17 +179,17 @@
 2\:n2=4
 2\:n1=3
 #1:n3
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -197,17 +197,17 @@
 2\:n2=4
 2\:n1=3
 #1:n2
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -215,17 +215,17 @@
 2\:n2=4
 2\:n1=3
 #2:n3
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -233,17 +233,17 @@
 2\:n2=4
 2\:n1=3
 #1:n1
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -251,17 +251,17 @@
 2\:n2=4
 2\:n1=3
 #2:n2
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5
@@ -269,17 +269,17 @@
 2\:n2=4
 2\:n1=3
 #2:n1
-#Mon Apr 11 21:17:34 WEST 2022
+#Fri Apr 22 16:26:40 WEST 2022
 1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=Holden&nbsp;Roberto
+1\:nam1=holden&nbsp;
 1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=1
+1\:counter=3
 2\:nam1=Ariclenes
-2\:lastUpdate=Wed, 11 May 2022 20\:17\:34 GMT
-2\:counter=1
-1\:lastUpdate=Wed, 11 May 2022 20\:16\:58 GMT
-2\:nam3=Wendi
-2\:nam2=Stelvio
+2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
+2\:counter=2
+1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
+2\:nam3=wendi
+2\:nam2=stelvio
 1\:n3=3
 1\:n2=2
 2\:n3=5

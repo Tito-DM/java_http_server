@@ -240,16 +240,17 @@ public class SarAPI extends JavaRESTAPI {
 
         }
 
-        // Prepare html page
-        String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
-                group, cnt, n1, nam1, n2, nam2, n3, nam3, chekBtn, lastUpdate, "");
-
-        // Prepare answer
-        // ans.set_code(HTTPReplyCode.OK);
-        ans.set_text_headers(html);
-
+  
+      
         // prepare the cookies
         ans.set_header("Set-Cookie", group);
+
+      // Prepare html page
+      String html = make_Page(s.getInetAddress().getHostAddress(), s.getPort(), headers.getHeaderValue("User-Agent"),
+      group, cnt, n1, nam1, n2, nam2, n3, nam3, chekBtn, lastUpdate, headers.getHeaderValue("Cookie"));
+  // Prepare answer
+        // ans.set_code(HTTPReplyCode.OK);
+        ans.set_text_headers(html);
 
         return true;
     }
