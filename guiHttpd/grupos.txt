@@ -1,288 +1,288 @@
-#1:nam3
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:nam1
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:nam2
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:counter
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
 #2:nam1
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:counter
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:nam3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:lastUpdate
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:counter
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:lastUpdate
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:n1
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:n2
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:nam2
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:n3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:nam1
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:nam3
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:nam2
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:n3
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:n2
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:n3
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
-#1:n1
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:n2
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
+#3:lastUpdate
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1
 #2:n1
-#Fri Apr 22 16:26:40 WEST 2022
-1\:nam3=Agostinho&nbsp;Neto
-1\:nam1=holden&nbsp;
-1\:nam2=Jonas&nbsp;Savimbi
-1\:counter=3
-2\:nam1=Ariclenes
-2\:lastUpdate=Sun, 22 May 2022 15\:26\:40 GMT
-2\:counter=2
-1\:lastUpdate=Sun, 22 May 2022 15\:25\:50 GMT
-2\:nam3=wendi
-2\:nam2=stelvio
-1\:n3=3
-1\:n2=2
-2\:n3=5
-1\:n1=1
-2\:n2=4
-2\:n1=3
+#Fri Apr 22 18:06:13 WEST 2022
+2\:nam1=JavaScript
+3\:counter=0
+3\:nam3=
+2\:lastUpdate=Sun, 22 May 2022 16\:45\:04 GMT
+2\:counter=4
+3\:n1=
+3\:n2=
+3\:nam2=
+3\:n3=
+3\:nam1=
+2\:nam3=Java
+2\:nam2=Python
+2\:n3=3
+2\:n2=2
+3\:lastUpdate=Sun, 22 May 2022 17\:06\:13 GMT
+2\:n1=1

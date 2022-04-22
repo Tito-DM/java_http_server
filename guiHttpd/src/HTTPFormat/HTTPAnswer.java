@@ -260,12 +260,18 @@ public class HTTPAnswer {
                     Log(true, "Internal error sending answer data\n");
                     return;
                 }
-
+                  // IMPORTANT - Please modify this code to send a file chunk-by-chunk
+                // to avoid having CRASHES with BIG FILES
+               while(fin.available()>2048){
+                byte[] data = new byte[2048];
+                fin.read(data); 
+                   
+               }
                 byte[] data = new byte[fin.available()];
                 fin.read(data); // Read the entire file to buffer 'data'
                 // IMPORTANT - Please modify this code to send a file chunk-by-chunk
                 // to avoid having CRASHES with BIG FILES
-                Log(true, "HTTPAnswer may fail for large files - please modify it\n");
+               // Log(true, "HTTPAnswer may fail for large files - please modify it\n");
                 pout.write(data);
                 fin.close();
             } else if ((code.get_code() != HTTPReplyCode.NOTMODIFIED)

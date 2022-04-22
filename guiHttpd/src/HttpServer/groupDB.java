@@ -109,7 +109,7 @@ public class groupDB {
                
             }
             catch (Exception e) {
-                pgroups.setProperty(group+":counter", "1");
+                pgroups.setProperty(group+":counter", "0");
             }
         }
         pgroups.setProperty(group+":n1", n1);

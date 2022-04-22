@@ -231,12 +231,12 @@ public class httpThread extends Thread {
                         ans.send_Answer(pout, true, true);
                     }
                 } catch (IOException e) {
-                    System.out.println("SETIMEOUT break");
+                    System.out.println("SETIMEOUT break exception");
                     break;
                 }
             } while (ans.headers.getProperty("Connection").equals("keep-alive")
                     && receivedhttp.version.equals("HTTP/1.1"));
-                    System.out.println("Out Side Loop");
+        
             in.close();
             pout.close();
             out.close();
